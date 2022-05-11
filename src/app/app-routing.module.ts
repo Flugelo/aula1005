@@ -10,6 +10,14 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'formulario',
+    loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
+  },
+  {
+    path: 'scrollalfabeto',
+    loadChildren: () => import('./scrollalfabeto/scrollalfabeto.module').then( m => m.ScrollalfabetoPageModule)
   }
 ];
 

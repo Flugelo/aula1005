@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot='start'></ion-menu-button>
+    <ion-title>scrollalfabeto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor='let alf of alfabeto | slice:0:limite'>
+      <ion-label color="dark">{{alf}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="atualizarInfiti($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
